@@ -1,3 +1,9 @@
 {
-  "name": "LOLA Professional"
+  "name": "LOLA Professional",
+  "home": "home",
+  "services": "services",
+  "about": "about",
+  "aboutUs": "about us",
+  "contact": "contact",
+  "contactUs": "contact us"
 }

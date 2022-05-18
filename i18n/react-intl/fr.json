@@ -1,3 +1,8 @@
 {
-  "name": "french"
+  "name": "french name",
+  "home": "french home",
+  "services": "french services",
+  "about": " french about",
+  "contact": "french contact"
 }
+
