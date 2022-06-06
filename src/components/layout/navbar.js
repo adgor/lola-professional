@@ -10,7 +10,7 @@ const services = [
     title: "clean",
     path: "/clean",
     id: "1",
-  }
+  },
 ];
 
 function Header() {
@@ -26,7 +26,7 @@ function Header() {
             title={intl.formatMessage({ id: "name" })}
             className="inline-flex items-center mr-8"
           >
-{/* logo */}
+            {/* logo */}
             <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">
               {intl.formatMessage({ id: "name" })}
             </span>
@@ -46,23 +46,17 @@ function Header() {
           } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
         >
           <div className="flex flex-col items-baseline -ml-3 md:space-x-2 sm:flex-row lg:flex-grow">
-             
-
-
-
- <ul className="flex items-center hidden space-x-2 lg:flex">
-              
-             <li>
+            <ul className="flex items-center hidden space-x-2 lg:flex">
+              <li>
                 <LocalizedLink
-                  href="/"
+                  to="/"
                   aria-label={intl.formatMessage({ id: "home" })}
                   title={intl.formatMessage({ id: "home" })}
                   className="px-3 py-2 text-sm font-medium capitalize tracking-wide text-gray-300 transition-colors duration-200 rounded-md hover:bg-gray-700 hover:text-white "
                 >
-
-                {intl.formatMessage({ id: "home" })}
+                  {intl.formatMessage({ id: "home" })}
                 </LocalizedLink>
-              </li> 
+              </li>
 
               <li className="relative px-3 py-2 text-sm capitalize font-medium tracking-wide text-gray-300 transition-colors duration-200 rounded-md cursor-pointer group dropdown hover:bg-gray-700 hover:text-white">
                 <span> {intl.formatMessage({ id: "services" })}</span>
@@ -71,56 +65,47 @@ function Header() {
                     <div className="w-3 h-3 origin-bottom-left transform rotate-45 bg-gray-700 "></div>
                   </div>
                   <ul className="top-0 grid w-auto grid-flow-col grid-rows-6 gap-6 px-6 py-8 bg-gray-700 rounded shadow">
-            {services.map((service) => (
-                        <li>
-              <LocalizedLink
-                key={service.id}
-                to={service.path}
-               // activeStyle="bg-red-400"
-                 activeClassName="active"
-                // className={`px-3 py-2 text-base font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white  ${
-                //   "!active" ? "bg-red-400" : "bg-biscay-100"
-                // }`}
-                className="px-3 py-2 text-base font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white active:bg-biscay-400"
-              >
-                {intl.formatMessage({ id: service.title })}
-              </LocalizedLink>
-              </li>
-            ))}
+                    {services.map((service) => (
+                      <li>
+                        <LocalizedLink
+                          key={service.id}
+                          to={service.path}
+                          // activeStyle="bg-red-400"
+                          activeClassName="active"
+                          // className={`px-3 py-2 text-base font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white  ${
+                          //   "!active" ? "bg-red-400" : "bg-biscay-100"
+                          // }`}
+                          className="px-3 py-2 text-base font-medium rounded-md text-paleSky-300 hover:bg-biscay-700 hover:text-white active:bg-biscay-400"
+                        >
+                          {intl.formatMessage({ id: service.title })}
+                        </LocalizedLink>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </li>
- 
-             <li>
-                <LocalizedLink
 
+              <li>
+                <LocalizedLink
                   to="/about"
                   aria-label={intl.formatMessage({ id: "aboutUs" })}
                   title={intl.formatMessage({ id: "aboutUs" })}
                   className="px-3 py-2 capitalize text-sm font-medium tracking-wide text-gray-300 transition-colors duration-200 rounded-md hover:bg-gray-700 hover:text-white "
                 >
-                                  {intl.formatMessage({ id: "about" })}
-
+                  {intl.formatMessage({ id: "about" })}
                 </LocalizedLink>
-              </li> 
-                           <li>
+              </li>
+              <li>
                 <LocalizedLink
-
                   to="/contact"
                   aria-label={intl.formatMessage({ id: "contactUs" })}
                   title={intl.formatMessage({ id: "contactUs" })}
                   className="px-3 py-2 capitalize text-sm font-medium tracking-wide text-gray-300 transition-colors duration-200 rounded-md hover:bg-gray-700 hover:text-white "
                 >
-                                  {intl.formatMessage({ id: "contact" })}
-
+                  {intl.formatMessage({ id: "contact" })}
                 </LocalizedLink>
-              </li> 
-
+              </li>
             </ul>
-
-
-
-
           </div>
           <div className="flex items-center pt-2 mt-4 border-t border-paleSky-700 lg:border-t-0 lg:pt-0 lg:mt-0">
             <LanguageSwitcher />

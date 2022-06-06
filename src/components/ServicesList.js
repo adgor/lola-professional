@@ -14,7 +14,7 @@ export const ServicesList = () => {
         serviceTitleSecond=""
         serviceDesc={intl.formatMessage({ id: "cleaningDescription" })}
         btnColorStyle="bg-brand-secondary text-white"
-        btnLink="/services/web"
+        btnLink="/clean"
         order="order-last ml-20"
       >
         <StaticImage
